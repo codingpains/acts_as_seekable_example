@@ -1,0 +1,29 @@
+<%= form.error_messages %>
+<p>
+  <%= form.label :name %><%= required %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :city %><%= required %><br />
+  <%= form.text_field :city %>
+</p>
+<p>
+  <%= form.label :state %><%= required %><br />
+  <%= form.text_field :state %>
+</p>
+<p>
+  <%= form.label :level %><%= required %><br />
+  <%= form.select :level, [['Amateur','Amateur'],['Semipro','Semipro'],
+      ['Pro', 'Pro']] %>
+</p>
+<p>
+  <%= form.label :championships %><%= required %><br />
+  <%= form.text_field :championships, :size => 3 %>
+</p>
+<h2>Soccer Players in this team</h2>
+<div id='soccer_players'>
+  <% form.fields_for :soccer_players do |soccer_player_form| -%>
+    <%= render :partial => 'soccer_player', :locals => {:form => soccer_player_form} %>
+  <% end -%>
+</div>
+<p><%= add_link_for(:soccer_players, form) %></p>

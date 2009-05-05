@@ -1,0 +1,1 @@
+page[:teams].replace_html :partial => @teams

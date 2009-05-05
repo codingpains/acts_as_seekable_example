@@ -1,0 +1,40 @@
+<h1><%= title "Listing soccer players" %></h1>
+<% content_for :sidebar do -%>
+<div>
+  <h1>Options</h1>
+  <ul>
+    <li><%= link_to 'New soccer player', new_soccer_player_path %></li>
+  </ul>
+</div>
+<div>
+  <h1>Search</h1>
+<% form_for :search_form, :html => {
+   :id => "filter_form", :method => 'get' } do |f| %>
+  <p>
+    <%= text_field_tag :search, nil, :size => 31 %>
+  </p>
+  <p>
+    <%= f.label :filter %><br />
+    <%= soccer_players_filter %>
+  </p>
+  <p>
+    <%= f.label :order %><br />
+    <%= soccer_players_order %>
+  </p>
+  <p>
+    <%= f.label :per_page %><br />
+    <%= soccer_players_per_page %>
+  </p>
+  <%= observe_form "filter_form",
+    :url => soccer_players_path,
+    :method => :get,
+    :frequency => 0.5 %>
+  <% end -%>
+</div>
+<% end -%>
+<div id="pagination">
+  <%= will_paginate @soccer_players, :params => params %>
+</div>
+<div id='soccer_players' class='list'>
+  <%= render @soccer_players %>
+</div>

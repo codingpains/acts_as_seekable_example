@@ -1,0 +1,5 @@
+<div class='soccer_player_form'>
+  <h4>Create a soccer player</h4>
+  <%= render :partial => 'soccer_players/form', :locals => {:form => form} %>
+  <p><%= delete_fields_link(form, 'div') %></p>
+</div>

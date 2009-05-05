@@ -1,0 +1,35 @@
+<h1><%= title "Listing teams" %></h1>
+<% content_for :sidebar do -%>
+<div>
+  <h2>What can you do?</h2>
+  <ul>
+    <li><%= link_to 'create a new team', new_team_path %></li>
+  </ul>
+</div>
+<div>
+  <h2>Search</h2>
+  <% form_for :search_form, :html => {
+     :id => "filter_form", :method => 'get' } do |f| %>
+    <p>
+      <%= f.label :search, "Search by name or city" %><br />
+      <%= text_field_tag :search, nil, :size => 31 %>
+    </p>
+    <p>
+      <%= f.label :filter %><br />
+      <%= teams_filter %>
+    </p>
+    <p>
+      <%= f.label :order %><br />
+      <%= teams_order %>
+    </p>
+    <%= observe_form "filter_form",
+      :url => teams_path,
+      :method => :get,
+      :frequency => 0.5 %>
+  <% end -%>
+</div>
+<% end -%>
+<div id="teams" class='list'>
+  <%= render @teams %>
+</div>
+</table>

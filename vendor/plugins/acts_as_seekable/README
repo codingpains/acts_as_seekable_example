@@ -1,0 +1,46 @@
+ActsAsSeekable
+==============
+
+This plugin allows you to make your models seekable (searchable) by combining
+filter params with order and search params. The values in the order and search params
+will be used as lambda values for ordered_by and search named_scopes. Values in the
+filter param will be treated as named_scopes. Since this plugin works based on
+named_scopes, it will add an all_records and ordered_by named_scope to all models that have acts_as_seekable in them, you must create your own search named_scope for the seek (search) functionality to work and aditional named_scope for each filter you want.
+When sending the filter param to the seek method, it is very important that you have
+a named_scope called like the value of the parameter, or else it wont work.
+You can specify if your seach will be paginated or not, it will use mislav-will_paginate
+plugin to perform pagination, if you don't that gem installed acts_as_seekable
+will ingnore the :paginate param.
+
+
+Example
+=======
+
+  Example with mislav-will_paginate:
+
+    acts_as_seekable :paginate => true
+          or
+    acts_as_seekable :paginate => :true
+          or
+    acts_as_seekable :paginate => "true"
+
+    named_scope :search, lambda { |search| conditions.... }
+  ----------------------------------------------------------------
+
+  Example without mislav-will_paginate:
+
+    acts_as_seekable   #short way
+          or
+    acts_as_seekable :paginate => false #long way
+          or
+    acts_as_seekable :paginate => :false #long way
+          or
+    acts_as_seekable :paginate => "false" #long way
+
+    named_scope :search, lambda { |search| conditions.... }
+  -----------------------------------------------------------------
+
+For a full example of an application working with acts_as_seekable visit
+ http://github.com/gusortiz
+
+Copyright (c) 2009 Gustavo Adrian Ortiz Monroy, released under the MIT license

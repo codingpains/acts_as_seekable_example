@@ -1,0 +1,29 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+rojos:
+  name: "Rojos"
+  city: "Guadalajara"
+  state: "Jalisco"
+  level: "Amateur"
+  championships: 0
+
+madrid:
+  name: "Real Madrid"
+  city: "Madrid"
+  state: "Madrid"
+  level: "Pro"
+  championships: 10
+
+santos:
+  name: "Santos do Brasil"
+  city: "Santos"
+  state: "Sao Paulo"
+  level: "Pro"
+  championships: 8
+
+toluca:
+  name: "Toluca"
+  city: "Toluca"
+  state: "Estado de México"
+  level: "Pro"
+  championships: 8

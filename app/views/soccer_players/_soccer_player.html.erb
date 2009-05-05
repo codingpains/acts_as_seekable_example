@@ -1,0 +1,14 @@
+<div class='soccer_player' id="soccer_player_<%= soccer_player.id %>">
+  <h3>
+    <%= soccer_player.description %>
+    <%= soccer_player_status(soccer_player.active) %>
+  </h3>
+  <%= soccer_player.age %> years old.<br />
+  <%= soccer_player.level %>
+  <div class='actions'>
+    <%= link_to "edit", edit_soccer_player_path(soccer_player) %>
+    &nbsp;|&nbsp;
+    <%= link_to_remote "delete",
+        :url => soccer_player_path(soccer_player), :method => :delete %>
+  </div>
+</div>

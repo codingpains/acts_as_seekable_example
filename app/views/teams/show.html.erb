@@ -1,0 +1,27 @@
+<h1><%= title "Showing team #{@team.name}" %></h1>
+<% content_for :sidebar do -%>
+<div>
+  <h2>What can you do?</h2>
+  <ul>
+    <li><%= link_to "edit this team", edit_team_path(@team) %></li>
+    <li>
+      <%= link_to "delete this team", team_path(@team), :method => :delete %>
+    </li>
+  </ul>
+</div>
+<% end -%>
+<p>
+  Located at <%= @team.city %>, <%= @team.state %><br />
+  <%= @team.level %> with <%= pluralize(@team.championships, 'championship') %>
+</p>
+<p>
+  <h3>Soccer players in this team</h3>
+  <ul>
+  <% @team.soccer_players.each do |soccer_player| -%>
+    <li>
+      <strong><%= soccer_player.name %></strong>,
+      <%= soccer_player.age %> years old.
+    </li>
+  <% end -%>
+  </ul>
+</p>

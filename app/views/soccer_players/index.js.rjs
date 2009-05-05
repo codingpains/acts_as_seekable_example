@@ -1,0 +1,2 @@
+page[:soccer_players].replace_html :partial => @soccer_players
+page[:pagination].replace_html will_paginate( @soccer_players, :params => params)

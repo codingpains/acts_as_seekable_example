@@ -1,0 +1,64 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+victor:
+  team: rojos
+  name: "Victor Garciamontes"
+  age: 25
+  active: true
+  level: "Amateur"
+
+pieck:
+  team: rojos
+  name: "Pablo Pieck"
+  age: 25
+  active: true
+  level: "Amateur"
+
+gustavo:
+  team: rojos
+  name: "Gustavo Ortíz"
+  age: 24
+  active: true
+  level: "Amateur"
+
+zidane:
+  team: madrid
+  name: "Zinedine Zidane"
+  age: 35
+  active: false
+  level: "Pro"
+
+pele:
+  team: santos
+  name: "Edson do Nacimento (Pelé)"
+  age: 70
+  active: false
+  level: "Pro"
+
+ruth:
+  team: madrid
+  name: "Ruth Van Nistelroy"
+  age: 30
+  active: true
+  level: "Pro"
+
+cristante:
+  team: toluca
+  name: "Hernán Cristante"
+  age: 34
+  active: true
+  level: "Pro"
+
+topo:
+  team: rojos
+  name: "Pablo Galindo"
+  age: 20
+  active: true
+  level: "Amateur"
+
+edgar:
+  team: rojos
+  name: "Edgar Rivera"
+  age: 26
+  active: true
+  level: "Amateur"

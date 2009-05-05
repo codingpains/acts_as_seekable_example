@@ -1,0 +1,10 @@
+<h1><%= title "Editing team" %></h1>
+
+<% form_for(@team) do |f| %>
+  <%= f.error_messages %>
+  <%= render f %>
+  <p>
+    <%= f.submit 'Update' %>&nbsp;or
+    <%= link_to 'Back', teams_path %>
+  </p>
+<% end %>

@@ -1,0 +1,6 @@
+page[:notice].replace_html flash[:notice]
+page[@team].visual_effect :highlight, :duration => 0.5
+page[@team].visual_effect :fade, :duration => 0.5
+page.delay 0.5 do
+  page[@team].remove
+end

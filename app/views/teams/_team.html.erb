@@ -1,0 +1,12 @@
+<div id="team_<%= team.id %>" class='team'>
+  <h3>
+    <%= team.name %>[<%= pluralize(team.soccer_players.count, 'player') %>]
+  </h3>
+  <%= team.city %>, <%= team.state %><br />
+  <%= team.level %> with <%= pluralize(team.championships, 'championship') %>
+  <div class='actions'>
+    <%= link_to "show", team_path(team) %>&nbsp;|&nbsp;
+    <%= link_to "edit", edit_team_path(team) %>&nbsp;|&nbsp;
+    <%= link_to_remote "delete", :url => team_path(team), :method => :delete %>
+  </div>
+</div>

@@ -1,0 +1,171 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #5B62BD;
+  color: #333;
+  text-align: center;
+}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+ul, p, table, div {
+  margin: 5px;
+  padding: 5px;
+
+}
+ul li{
+  list-style: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+h1, h2 {
+  border-bottom: 2px solid #000;
+  display: block;
+  margin: 5px 0;
+  padding: 10px;
+}
+
+#wrap {
+  text-align: center;
+}
+#menu {
+  height: 50px;
+  margin: 10px 10%;
+  text-align: left;
+  width: 80%;
+}
+#menu ul li{
+  display: inline;
+}
+
+#menu ul li a{
+  border-left: 2px solid #000;
+  color: #000;
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+#menu ul li a:hover{
+  border-left: 4px solid #fff;
+  color: #fff;
+}
+
+#container {
+  background-color: #fff;
+  float: left;
+  margin: 20px 10px 20px 10%;
+  padding: 10px;
+  width: 600px;
+  text-align: left;
+}
+#sidebar {
+  float: right;
+  margin: 15px 10% 20px 10px;
+  width: 300px;
+  background-color: transparent;
+  text-align: left;
+}
+#sidebar div {
+  background-color: #fff;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #3945D7;
+}
+a:visited {
+  color: #3945D7;
+}
+a:hover {
+  color: #f00;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+span {
+  margin: 2px;
+  padding: 2px;
+}
+
+span.active {
+  color: #FFF;
+  background-color: #428339;
+}
+
+span.inactive {
+  color: #FFF;
+  background-color: #9B9B9B;
+}
+
+.soccer_player_form {
+  border-left: 3px solid #F29C34;
+  margin-bottom: 10px;
+}
+
+div.list div.soccer_player, div.list div.team{
+  border-bottom: 1px dotted #000;
+}
+
+
+.actions{
+  border: 0px;
+  margin: 0;
+  padding: 5px 0;
+}
+
+span.comment {
+  color: #9B9B9B;
+}
+#notice {
+  color: green;
+  font-size: 20px;
+}
